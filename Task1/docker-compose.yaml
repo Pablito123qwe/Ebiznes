@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  ebiznes1-service:
+    build:
+      context: .
+    image: waclawikpawel/ebiznes1:latest
+    container_name: ebiznes1
+    ports:
+      - "8000:8080"
+    working_dir: /app/HelloWorld
+    volumes:
+      - .:/app
+    command: gradle run -q
+    stdin_open: true
+    tty: true
+
+
