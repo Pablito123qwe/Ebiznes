@@ -1,0 +1,8 @@
+GET     /products               controllers.ProductController.getProductsText
+
+
+# Mapowanie statycznych zasobów
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+# Przykładowa strona główna
+GET     /                           controllers.HomeController.index()
