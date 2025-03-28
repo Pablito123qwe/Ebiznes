@@ -1,4 +1,9 @@
-GET     /products               controllers.ProductController.getProductsText
+GET     /products               controllers.ProductController.show_all
+GET     /products/:id           controllers.ProductController.get_product_by_id(id: Int)
+POST    /products               controllers.ProductController.add_new_product
+DELETE  /products/:id    controllers.ProductController.delete_product(id: Int)
+PUT     /products/:id    controllers.ProductController.update_product(id: Int)
+
 
 
 # Mapowanie statycznych zasobów
