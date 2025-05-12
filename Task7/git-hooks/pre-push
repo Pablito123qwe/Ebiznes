@@ -1,0 +1,17 @@
+(base) pawel@Pablo:/mnt/c/Users/pawel/Ebiznes/.git/hooks$ cat pre-push
+#!/bin/sh
+
+echo "Uruchamianie analizy SonarCloud dla serwera (Task7/server)..."
+
+cd Task7/backend || exit 1
+
+
+if ! sonar-scanner ; then
+  echo "SonarCloud wykrył błędy – push przerwany."
+  exit 1
+fi
+
+cd - > /dev/null
+
+echo "Sonar analiza serwera zakończona sukcesem – kontynuowanie push."
+exit 0
