@@ -1,0 +1,32 @@
+name: CI/CD GCP Deployment
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Node.js setup
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    # Przykład: buduj i testuj frontend
+    - name: Build frontend
+      run: |
+        cd frontend
+        npm install
+        npm run build
+
+    # Przykład: testuj backend
+    - name: Test backend
+      run: |
+        cd backend
+        npm install
+        npm test
