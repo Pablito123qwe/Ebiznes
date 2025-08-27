@@ -25,3 +25,6 @@
 
 ## Task9
 ✅ 3.0 [Commit](https://github.com/Pablito123qwe/Ebiznes/commit/c4d67268ec098e7c200139ed0dd8330db72b4c6b)
+
+## Task10
+✅ 3.0, 3.5, 4.0, 4.5, 5.0 [Link do repozytorium](https://github.com/Pablito123qwe/Ebiznes10)
